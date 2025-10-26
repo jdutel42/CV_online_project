@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Replace example.com with your real domain after deployment -->
+  <!-- Sitemap updated for jordandutel.com -->
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://jordandutel.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://example.com/#about</loc>
+  <loc>https://jordandutel.com/#about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#resume</loc>
+  <loc>https://jordandutel.com/#resume</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#portfolio</loc>
+  <loc>https://jordandutel.com/#portfolio</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/#contact</loc>
+  <loc>https://jordandutel.com/#contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

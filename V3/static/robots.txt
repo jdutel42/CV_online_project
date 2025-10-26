@@ -1,5 +1,5 @@
 User-agent: *
 Disallow:
 
-# Sitemap (replace example.com with your domain after deployment)
-Sitemap: https://example.com/sitemap.xml
+# Sitemap for jordandutel.com
+Sitemap: https://jordandutel.com/sitemap.xml
