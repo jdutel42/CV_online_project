@@ -110,6 +110,16 @@ def download_cv():
     return send_from_directory(cv_directory, cv_filename, as_attachment=True)
 
 
+# Serve sitemap and robots at site root (helpful for crawlers)
+@app.route('/sitemap.xml')
+def sitemap():
+    return send_from_directory('static', 'sitemap.xml')
+
+
+@app.route('/robots.txt')
+def robots():
+    return send_from_directory('static', 'robots.txt')
+
 # ---------------------------------------------------------------------------------------
 # Easter Egg
 # ---------------------------------------------------------------------------------------
@@ -170,4 +180,5 @@ def test():
 ##########################################################################################
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Use port 8000 for local testing to avoid conflicts with other services
+    app.run(debug=True, port=8000)

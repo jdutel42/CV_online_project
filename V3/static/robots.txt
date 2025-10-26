@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+# Sitemap (replace example.com with your domain after deployment)
+Sitemap: https://example.com/sitemap.xml
