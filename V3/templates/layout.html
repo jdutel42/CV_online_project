@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta name="google-site-verification" content="TXX7oDhl6El0i-1uQ_h3miF68JIHswEYfzY90yThjEA" />
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Jordan Dutel | Online resume</title>
@@ -10,6 +11,38 @@
   <meta name="robots" content="index, follow">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ url_for('sitemap') }}">
   <link rel="canonical" href="https://jordandutel.com/">
+  <!-- Open Graph / Social meta -->
+  <meta property="og:title" content="Jordan Dutel — Bioinformatician" />
+  <meta property="og:description" content="Master student in Bioinformatics. Multi-omics analyst, immunology and RNA-seq specialist. Portfolio and CV online." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jordandutel.com/" />
+  <meta property="og:image" content="{{ url_for('static', filename='assets/img/my-profile-img.jpg') }}" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jordan Dutel — Bioinformatician">
+  <meta name="twitter:description" content="Master student in Bioinformatics. Multi-omics analyst, immunology and RNA-seq specialist.">
+  <meta name="twitter:image" content="{{ url_for('static', filename='assets/img/my-profile-img.jpg') }}">
+
+  <!-- JSON-LD structured data (Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jordan Dutel",
+    "url": "https://jordandutel.com",
+    "image": "{{ url_for('static', filename='assets/img/my-profile-img.jpg') }}",
+    "jobTitle": "Bioinformatician",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Université Claude Bernard Lyon 1"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/jordan-dutel",
+      "https://github.com/jdutel42"
+    ]
+  }
+  </script>
 
   <!-- Favicons -->
   <link href="{{ url_for('static', filename='assets/img/phenix1.png') }}" rel="icon">
