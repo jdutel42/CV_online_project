@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content_hero %}
+<!-- Hero Section -->
+<section id="hero" class="hero section dark-background">
+
+  <img src="{{ url_for('static', filename='assets/img/ironmann.jpg') }}" alt="" data-aos="fade-in" class="">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <h2>Jordan Dutel</h2>
+    <p>I am <span class="typed" data-typed-items="bioinformatician, immunologist, in data science, in immuno-informatics"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+  </div>
+
+</section>
+<!-- /Hero Section -->
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block content_portfolio_project %}
+
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Portfolio Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
+
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+              
+              <h1>Project n°{{ project_id }}</h1>
+
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="{{ url_for('static', filename='assets/img/portfolio/bacteria.png') }}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{{ url_for('static', filename='assets/img/portfolio/Dataset_description.png') }}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{{ url_for('static', filename='assets/img/portfolio/Pipeline_2.png') }}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{{ url_for('static', filename='assets/img/portfolio/metagenomic.jpeg') }}" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Project information
+              </h3>
+              <ul>
+                <li><strong>Category</strong>: RNAseq analysis, Immunology</li>
+                <li><strong>Laboratory</strong>: CIRI, VIV Team</li>
+                <li><strong>Project date</strong>: 07 January, 2024</li>
+                <li><strong>Project URL</strong>: <a href="https://github.com/jdutel42/Project_2/">GitHub project</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>Alternative splicing in pDC and impact on antiviral response</h2>
+              <p>
+                Since the last few decades, urban expansion and human activities have led humans to interact with more and more species that we have ever face yet. This interaction with different species shows us that zoonoses (like virus CoVID19) can appear. So, understanding immune system mechanisms, especially in the context of viral infection have become a public health issue. In human species, viral infections are mostly managed by immune cells called plasmacytoid dendritic cells (pDC). Thoses cells are huge producers of type 1 interferon, a very efficient alarming cytokine that put cells in a virus-aware state, ready to resist viral infection. Several other proteins are synthetised by pDC, and this will allow a very specific immune response against the virus. Thus, in context of viral infection, these proteins produced by pDC are essential and so, really regulated. Among these regulatory mechanisms, alternative splicing remodeling could explain how pDC can adapt their response according to the virus they face. Such mechanisms have already been showned in other immune cells, but as of now, mechanisms in pDC aren't well known.            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+  {% endblock %}

@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+
+{% block content_about %}
+<!-- About Section -->
+<section id="about" class="about section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>About</h2>
+      <p>Passionate bioinformatician with expertise in multi-omics, immunology, and advanced computational pipelines, aiming to drive innovation in cancer research and biotechnology.</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4 justify-content-center">
+        <div class="col-lg-4">
+          <img src="{{ url_for('static', filename='assets/img/tonyy.jpg') }}" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-8 content">
+          <h2>Master 2 Student in Bioinformatic &amp; Immunology.</h2>
+          <!-- <p class="fst-italic py-3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua.
+          </p> -->
+          <br>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>28 June 1998</span></li>
+                <!-- <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.nope.com</span></li> -->
+                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bioinformatic & Immunology</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+33 6 36 85 52 78</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Lyon, France</span></li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>26</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Establishment:</strong> <span>University Claude Bernard Lyon 1</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>jordan.dutel.contact@gmail.com</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Languages:</strong> <span>French | English</span></li>
+              </ul>
+            </div>
+          </div>
+          <p class="py-3">
+            Driven by a passion for leveraging bioinformatics and cutting-edge technologies to revolutionize cancer research and therapy, I aspire to contribute to impactful advancements in immunotherapy and multi-omics analysis. My long-term goal is to establish a pioneering biotech company that excels in innovative treatments, competes globally, and fosters open access to knowledge for the benefit of society.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section><!-- /About Section -->
+  {% endblock %}

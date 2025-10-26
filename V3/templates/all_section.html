@@ -1,0 +1,651 @@
+{% extends "layout.html" %}
+
+{% block content_all %}
+
+
+{% block content_hero %}
+<!-- Hero Section -->
+<section id="hero" class="hero section dark-background">
+
+    <img src="{{ url_for('static', filename='assets/img/un-grossissement-a-grande-echelle-devoile-l-anatomie-des-cellules-cancereuses-generee-par-l-ia.jpg') }}" alt="" data-aos="fade-in" class="">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <h2>Jordan Dutel</h2>
+      <p>I am <span class="typed" data-typed-items="bioinformatician, immunologist, data scientist, multi-omics analyst, RNA‑seq specialist, machine learning engineer, reproducible research advocate"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+    </div>
+
+</section>
+<!-- /Hero Section -->
+{% endblock %}
+
+
+
+
+{% block content_about %}
+<!-- About Section -->
+<section id="about" class="about section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>About</h2>
+    <p>Passionate bioinformatician with expertise in multi-omics, immunology, and advanced computational pipelines, aiming to drive innovation in cancer research and biotechnology.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4 justify-content-center">
+      <div class="col-lg-4">
+        <img src="{{ url_for('static', filename='assets/img/reliant-les-lignes-et-les-points-avec-des-particules-flottantes.jpg') }}" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-8 content">
+        <h2>Master 2 Student in Bioinformatic &amp; Immunology.</h2>
+        <!-- <p class="fst-italic py-3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </p> -->
+        <br>
+        <div class="row">
+          <div class="col-lg-6">
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>June, 28th 1998</span></li>
+              <!-- <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.nope.com</span></li> -->
+              <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bioinformatic & Immunology</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+33 (0)6 36 85 52 78</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Localisation:</strong> <span>Lyon, Toulouse(France)</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span id="age">--</span></li>
+              <script>
+              (function(){
+                // Date of birth: 28 June 1998 (months are 0-based)
+                const dob = new Date(1998, 5, 28);
+                const today = new Date();
+                let age = today.getFullYear() - dob.getFullYear();
+                const m = today.getMonth() - dob.getMonth();
+                if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) age--;
+                const el = document.getElementById('age');
+                if (el) el.textContent = age;
+              })();
+              </script>
+              <li><i class="bi bi-chevron-right"></i> <strong>Establishment:</strong> <span>University Claude Bernard Lyon 1</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>jordan.dutel.contact@gmail.com</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Languages:</strong> <span>French | English</span></li>
+            </ul>
+          </div>
+        </div>
+        <p class="py-3">
+          Driven by a passion for leveraging bioinformatics and cutting-edge technologies to revolutionize cancer research and therapy, I aspire to contribute to impactful advancements in immunotherapy and multi-omics analysis. My long-term goal is to establish a pioneering biotech company that excels in innovative treatments, competes globally, and fosters open access to knowledge for the benefit of society.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /About Section -->
+  {% endblock %}
+
+  {% block content_stats %}
+  <!-- Stats Section -->
+  <section id="stats" class="stats section">
+  
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+  
+        <div class="row gy-4">
+  
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="828" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Training Course</strong> <span>Hours of bioinformatic training duration</span></p>
+            </div>
+          </div><!-- End Stats Item -->
+  
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Projects</strong> <span>Academic projects completed</span></p>
+            </div>
+          </div><!-- End Stats Item -->
+  
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Internship</strong> <span>Number of internhip realized</span></p>
+            </div>
+          </div><!-- End Stats Item -->
+  
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Publications</strong> <span>Papers and articles published</span></p>
+            </div>
+          </div><!-- End Stats Item -->
+  
+        </div>
+  
+      </div>
+  
+    </section><!-- /Stats Section -->
+  
+  {% endblock %}
+
+  {% block content_skills %}
+  <!-- Skills Section -->
+  <section id="skills" class="skills section light-background">
+  
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+        <p>Skills developed throughout my training in bioinformatics, during my academic projects and my professional internships</p>
+      </div><!-- End Section Title -->
+  
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+  
+        <div class="row skills-content skills-animation">
+  
+          <div class="col-lg-6">
+  
+            <div class="progress">
+              <span class="skill"><span>Python</span> <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+  
+            <div class="progress">
+              <span class="skill"><span>R</span> <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+  
+            <div class="progress">
+              <span class="skill"><span>Statistics</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+  
+          </div>
+  
+          <div class="col-lg-6">
+  
+            <div class="progress">
+              <span class="skill"><span>Spatial & Multiomics analysis</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+  
+            <div class="progress">
+              <span class="skill"><span>SQL Database</span> <i class="val">50%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+  
+            <div class="progress">
+              <span class="skill"><span>Machine Learning</span> <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </section><!-- /Skills Section -->
+  
+  {% endblock %}
+
+  {% block content_resume %}
+<!-- Resume Section -->
+<section id="resume" class="resume section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+      <h2>Resume</h2>
+      <p>Master's student in Bioinformatics with a strong passion for immunology, drug design, and multi-omics analyses. My academic background includes research experiences and advanced bioinformatics expertise.</p>
+      <br>
+      <a href="/download-cv" class="btn btn-primary" download>
+        Download my resume</a>
+    
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+      <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="resume-title">Summary</h3>
+
+              <div class="resume-item pb-0">
+                  <h4>Jordan Dutel</h4>
+                  <p><em>I'm a autonomous, proactive, and curious student with expertise in bioinformatics, multi-omics data analysis, and molecular biology. Motivated by innovation and scientific challenges.</em></p>
+                  <ul>
+                      <li>Lyon, France</li>
+                      <li>+33 6 36 85 52 78</li>
+                      <li>jordan.dutel.contact@gmail.com</li>
+                      <li><a href="https://www.linkedin.com/in/jordan-dutel">LinkedIn</a></li>
+                  </ul>
+              </div><!-- End Resume Item -->
+
+              <h3 class="resume-title">Education</h3>
+              <div class="resume-item">
+                  <h4>Master’s Degree in Bioinformatics</h4>
+                  <h5>2023 - 2025</h5>
+                  <p><em>Université Claude Bernard Lyon 1</em></p>
+                  <p>Skills: Machine learning techniques, bayesian statistics, structural bioinformatics & drug design, multi-omics data analysis (genomics, metagenomics, transcriptomics, and proteomics), database management, web programming, advanced algorithmics.</p>
+              </div>
+
+              <div class="resume-item">
+                  <h4>Master’s Degree in Molecular Biology & Immunology</h4>
+                  <h5>2021 - 2023</h5>
+                  <p><em>Université Claude Bernard Lyon 1</em></p>
+                  <p>Skills: Immunology, immunopathology, cancer biology, genetic mapping, microscopy (electron, epifluorescence, confocal), RNA interference (Zebrafish embryo microinjection).</p>
+              </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <h3 class="resume-title">Professional Experience</h3>
+              <div class="resume-item">
+                  <h4>Data Science Research Intern</h4>
+                  <h5>April - June 2024</h5>
+                  <p><em>Centre Léon Bérard, Prevention & Public Health Team, Lyon</em></p>
+                  <ul>
+                      <li>Performed in-depth OMICS data analysis on a patient cohort to study mutational and immunological profiles.</li>
+                      <li>Used advanced factorial analysis (MOFA) to characterize patient subgroups and optimize personalized therapeutic strategies.</li>
+                  </ul>
+              </div><!-- End Resume Item -->
+
+              <div class="resume-item">
+                  <h4>Research Intern in Immuno-Oncology</h4>
+                  <h5>January - June 2023</h5>
+                  <p><em>CRCL (Cancer Research Center of Lyon), GRINBERG Team, Lyon</em></p>
+                  <ul>
+                      <li>Studied NF-kB transcription factor subunits in CD4+ T lymphocytes and their implications in autoimmune diseases and cancer.</li>
+                      <li>Performed gene knockout via CRISPR-Cas9, flow cytometry (BD LSR Fortessa), and protein detection using ELISA (TransAM Assay).</li>
+                  </ul>
+              </div>
+
+              <div class="resume-item">
+                  <h4>Virology Research Intern</h4>
+                  <h5>January - March 2022</h5>
+                  <p><em>CIRI (International Center for Infectiology Research), REVE Team, Lyon</em></p>
+                  <ul>
+                      <li>Developed a novel RNA vectorization system using the human pseudo-viral protein hPEG10.</li>
+                      <li>Performed plasmid cloning, RT-PCR, qPCR primer design, enzymatic digestion, and plasmid transfection.</li>
+                  </ul>
+              </div>
+          </div>
+
+      </div>
+
+  </div>
+
+</section><!-- /Resume Section -->
+
+{% endblock %}
+
+{% block content_portfolio %}
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Portfolio</h2>
+    <p>In this section, you can find all the projects I have worked on and developed.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+      <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+        <li data-filter="*" class="filter-active">All</li>
+        <li data-filter=".filter-app">Metagenomics</li>
+        <li data-filter=".filter-product">RNAseq Analysis</li>
+        <li data-filter=".filter-branding">Proteomics</li>
+        <li data-filter=".filter-books">Spatial OMICS</li>
+      </ul><!-- End Portfolio Filters -->
+
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div class="portfolio-content h-100">
+            <img src="{{ url_for('static', filename='assets/img/portfolio/Workflow.png') }}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Metagenomics</h4>
+              <p>Plasmid and ARG Analysis in Soil Metagenomes</p>
+              <a href="{{ url_for('static', filename='assets/img/portfolio/Workflow.png') }}" title="Metagenomics" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{{ url_for('portfolio_project', project_id=1) }}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="{{ url_for('static', filename='assets/img/portfolio/Dataset_description.png') }}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>RNAseq Analysis</h4>
+              <p>Alternative splicing analysis in plasmacytoïd dendritics cells</p>
+              <a href="{{ url_for('static', filename='assets/img/portfolio/Dataset_description.png') }}" title="RNAseq Analysis" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{{ url_for('portfolio_project', project_id=2) }}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="{{ url_for('static', filename='assets/img/portfolio/Pipeline_2.png') }}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>RNAseq Analysis</h4>
+              <p>Alternative splicing analysis in plasmacytoïd dendritics cells</p>
+              <a href="{{ url_for('static', filename='assets/img/portfolio/Pipeline_2.png') }}" title="RNAseq Analysis" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{{ url_for('portfolio_project', project_id=2) }}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="{{ url_for('static', filename='assets/img/portfolio/workflow3.png') }}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Proteomics</h4>
+              <p>Proteomic and Defensome Project</p>
+              <a href="{{ url_for('static', filename='assets/img/portfolio/workflow3.png') }}" title="Proteomics" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{{ url_for('portfolio_project', project_id=3) }}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="{{ url_for('static', filename='assets/img/portfolio/shiny.png') }}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Proteomics</h4>
+              <p>Proteomic and Defensome Project</p>
+              <a href="{{ url_for('static', filename='assets/img/portfolio/shiny.png') }}" title="Proteomics" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{{ url_for('portfolio_project', project_id=3) }}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <img src="{{ url_for('static', filename='assets/img/portfolio/spatial.png') }}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Spatial OMICS</h4>
+              <p>Spatial transcriptomics and breast cancer</p>
+              <a href="{{ url_for('static', filename='assets/img/portfolio/spatial.png') }}" title="Spatial OMICS" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{{ url_for('portfolio_project', project_id=4) }}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+
+      </div><!-- End Portfolio Container -->
+
+    </div>
+    
+  </div>
+
+  
+
+</section><!-- /Portfolio Section -->
+
+{% endblock %}
+
+{% block content_services %}
+<!-- Services Section -->
+<section id="services" class="services section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Services</h2>
+      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+          <div>
+            <h4 class="title"><a href="service-details.html" class="stretched-link">Lorem Ipsum</a></h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+          </div>
+        </div>
+        <!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+          <div>
+            <h4 class="title"><a href="service-details.html" class="stretched-link">Dolor Sitema</a></h4>
+            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+          <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+          <div>
+            <h4 class="title"><a href="service-details.html" class="stretched-link">Sed ut perspiciatis</a></h4>
+            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
+          <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+          <div>
+            <h4 class="title"><a href="service-details.html" class="stretched-link">Magni Dolores</a></h4>
+            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
+          <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
+          <div>
+            <h4 class="title"><a href="service-details.html" class="stretched-link">Nemo Enim</a></h4>
+            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+          <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
+          <div>
+            <h4 class="title"><a href="service-details.html" class="stretched-link">Eiusmod Tempor</a></h4>
+            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+          </div>
+        </div><!-- End Service Item -->
+
+      </div>
+
+    </div>
+
+  </section><!-- /Services Section -->
+
+{% endblock %}
+
+{% block content_testimonials %}
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials section light-background">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Testimonials</h2>
+      <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="swiper init-swiper">
+        <script type="application/json" class="swiper-config">
+          {
+            "loop": true,
+            "speed": 600,
+            "autoplay": {
+              "delay": 5000
+            },
+            "slidesPerView": "auto",
+            "pagination": {
+              "el": ".swiper-pagination",
+              "type": "bullets",
+              "clickable": true
+            },
+            "breakpoints": {
+              "320": {
+                "slidesPerView": 1,
+                "spaceBetween": 40
+              },
+              "1200": {
+                "slidesPerView": 3,
+                "spaceBetween": 1
+              }
+            }
+          }
+        </script>
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+              <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+              <h3>Saul Goodman</h3>
+              <h4>Ceo &amp; Founder</h4>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+              <h3>Sara Wilsson</h3>
+              <h4>Designer</h4>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+              <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+              <h3>Jena Karlis</h3>
+              <h4>Store Owner</h4>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+              <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+              <h3>Matt Brandon</h3>
+              <h4>Freelancer</h4>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+              <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+              <h3>John Larson</h3>
+              <h4>Entrepreneur</h4>
+            </div>
+          </div><!-- End testimonial item -->
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+
+  </section><!-- /Testimonials Section -->
+
+{% endblock %}
+
+{% block content_contact %}
+<!-- Contact Section -->
+<section id="contact" class="contact section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>If you are interested in connecting, feel free to reach out via email or LinkedIn</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-5">
+
+        <div class="info-wrap">
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <i class="bi bi-geo-alt flex-shrink-0"></i>
+            <div>
+              <h3>Address</h3>
+              <p>La Doua, Lyon, France</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <i class="bi bi-telephone flex-shrink-0"></i>
+            <div>
+              <h3>Call Me</h3>
+              <p>+33 36 85 52 78</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <i class="bi bi-envelope flex-shrink-0"></i>
+            <div>
+              <h3>Email Me</h3>
+              <p>jordan.dutel.contact@gmail.com</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.5032960386116!2d4.866578791593222!3d45.78114379651535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eaa1e83e5a71%3A0xea10294dfcf46939!2sLa%20Doua%20LYON%201!5e0!3m2!1sfr!2sfr!4v1735385821394!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Contact Section -->
+
+{% endblock %}
+
+{% endblock %}
+

@@ -1,0 +1,19 @@
+<div class="container section-title" data-aos="fade-up">
+    <h2>Error 500</h2>
+    <p>Internal Error</p>
+</div>
+</head> 
+
+{% extends "layout.html" %} 
+//exporting navbar and header from header.html 
+
+{% block content_error %} 
+
+<body onload="redirect()"> 
+
+<h1>Oops! Looks like the page doesn't exist</h1> 
+<br>
+<p>You will be automatically redirected to the <a href="{{ url_for('root') }}">Home page</a></p>
+<p id="pageInfo"></p> 
+
+{% endblock %} 
