@@ -125,7 +125,7 @@ def robots():
 @app.route('/favicon.ico')
 def favicon():
     # serve the favicon.ico placed in static/assets/img/
-    return send_from_directory('static/assets/img', 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+    return send_from_directory('static/assets/img', 'favicon.ico')
 
 # ---------------------------------------------------------------------------------------
 # Easter Egg
