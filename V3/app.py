@@ -120,6 +120,13 @@ def sitemap():
 def robots():
     return send_from_directory('static', 'robots.txt')
 
+
+# Serve favicon at root so crawlers and Google can easily find it
+@app.route('/favicon.ico')
+def favicon():
+    # serve the favicon.ico placed in static/assets/img/
+    return send_from_directory('static/assets/img', 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
 # ---------------------------------------------------------------------------------------
 # Easter Egg
 # ---------------------------------------------------------------------------------------
