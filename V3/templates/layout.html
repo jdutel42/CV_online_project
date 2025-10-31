@@ -21,13 +21,13 @@
   <meta property="og:description" content="Master student in Bioinformatics. Multi-omics analyst, immunology and RNA-seq specialist. Portfolio and CV online." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://jordandutel.com/" />
-  <meta property="og:image" content="{{ url_for('static', filename='assets/img/my-profile-img.jpg') }}" />
+  <meta property="og:image" content="{{ url_for('static', filename='assets/img/favicon.ico') }}" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Jordan Dutel — Bioinformatician">
   <meta name="twitter:description" content="Master student in Bioinformatics. Multi-omics analyst, immunology and RNA-seq specialist.">
-  <meta name="twitter:image" content="{{ url_for('static', filename='assets/img/my-profile-img.jpg') }}">
+  <meta name="twitter:image" content="{{ url_for('static', filename='assets/img/favicon.ico') }}">
 
   <!-- JSON-LD structured data (Person) -->
   <script type="application/ld+json">
@@ -36,7 +36,7 @@
     "@type": "Person",
     "name": "Jordan Dutel",
     "url": "https://jordandutel.com",
-    "image": "{{ url_for('static', filename='assets/img/my-profile-img.jpg') }}",
+    "image": "{{ url_for('static', filename='assets/img/my_pp.jpeg') }}",
     "jobTitle": "Bioinformatician",
     "worksFor": {
       "@type": "Organization",
@@ -44,14 +44,15 @@
     },
     "sameAs": [
       "https://www.linkedin.com/in/jordan-dutel",
-      "https://github.com/jdutel42"
+      "https://github.com/jdutel42",
+      "https://www.researchgate.net/profile/Jordan-Dutel"
     ]
   }
   </script>
 
   <!-- Favicons -->
   <link href="{{ url_for('static', filename='assets/img/favicon.ico') }}" rel="icon">
-  <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  <link href="{{ url_for('static', filename='assets/img/favicon.ico') }}" rel="apple-touch-icon">
   <!-- root favicon for crawlers and search engines -->
   <link rel="icon" href="{{ url_for('favicon') }}">
   <link rel="shortcut icon" href="{{ url_for('favicon') }}">
