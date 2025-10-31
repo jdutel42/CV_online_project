@@ -11,7 +11,7 @@
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <h2>Jordan Dutel</h2>
-      <p>I am <span class="typed" data-typed-items="bioinformatician, immunologist, data scientist, multi-omics analyst, RNA‑seq specialist, machine learning engineer, reproducible research advocate"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      <p>{{ t('hero_description') }} <span class="typed" data-typed-items="{{ t('hero_keywords') }}"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
     </div>
 
 </section>
@@ -27,8 +27,8 @@
 
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
-    <h2>About</h2>
-    <p>Passionate bioinformatician with expertise in multi-omics, immunology, and advanced computational pipelines, aiming to drive innovation in cancer research and biotechnology.</p>
+    <h2>{{ t('About') }}</h2>
+    <p>{{ t('about_desc') }}</p>
   </div><!-- End Section Title -->
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -38,7 +38,7 @@
         <img src="{{ url_for('static', filename='assets/img/reliant-les-lignes-et-les-points-avec-des-particules-flottantes.jpg') }}" class="img-fluid" alt="">
       </div>
       <div class="col-lg-8 content">
-        <h2>Master 2 Student in Bioinformatic &amp; Immunology.</h2>
+        <h2>{{ t('Definition_about_Jordan') }} </h2>
         <!-- <p class="fst-italic py-3">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua.
@@ -47,16 +47,16 @@
         <div class="row">
           <div class="col-lg-6">
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>June, 28th 1998</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>{{ t('Birthday') }}:</strong> <span>{{ t('Birthday_date') }} </span></li>
               <!-- <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.nope.com</span></li> -->
-              <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bioinformatic & Immunology</span></li>
-              <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+33 (0)6 36 85 52 78</span></li>
-              <li><i class="bi bi-chevron-right"></i> <strong>Localisation:</strong> <span>Lyon, Toulouse(France)</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>{{ t('Degree') }}:</strong> <span>{{ t('Degree_name') }} </span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>{{ t('Phone') }}:</strong> <span>{{ t('Phone_number') }} </span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>{{ t('Localisation') }}:</strong> <span>{{ t('Localisation_name') }} </span></li>
             </ul>
           </div>
           <div class="col-lg-6">
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span id="age">--</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>{{ t('Age') }}:</strong> <span id="age">--</span></li>
               <script>
               (function(){
                 // Date of birth: 28 June 1998 (months are 0-based)
@@ -69,14 +69,14 @@
                 if (el) el.textContent = age;
               })();
               </script>
-              <li><i class="bi bi-chevron-right"></i> <strong>Establishment:</strong> <span>University Claude Bernard Lyon 1</span></li>
-              <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>jordan.dutel.contact@gmail.com</span></li>
-              <li><i class="bi bi-chevron-right"></i> <strong>Languages:</strong> <span>French | English</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>{{ t('Establishment') }}:</strong> <span>{{ t('Establishment_name') }}</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>{{ t('Email') }}:</strong> <span>jordan.dutel.contact@gmail.com</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>{{ t('Languages') }}:</strong> <span>{{ t('Language_list') }}</span></li>
             </ul>
           </div>
         </div>
         <p class="py-3">
-          Driven by a passion for leveraging bioinformatics and cutting-edge technologies to revolutionize cancer research and therapy, I aspire to contribute to impactful advancements in immunotherapy and multi-omics analysis. My long-term goal is to establish a pioneering biotech company that excels in innovative treatments, competes globally, and fosters open access to knowledge for the benefit of society.
+          {{ t('CCL_About_Jordan') }}
         </p>
       </div>
     </div>
@@ -98,7 +98,7 @@
             <div class="stats-item">
               <i class="bi bi-emoji-smile"></i>
               <span data-purecounter-start="0" data-purecounter-end="828" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Training Course</strong> <span>Hours of bioinformatic training duration</span></p>
+              <p><strong>{{ t('Stat1_title') }}</strong> <span>{{ t('Stat1_meaning') }}</span></p>
             </div>
           </div><!-- End Stats Item -->
   
@@ -106,7 +106,7 @@
             <div class="stats-item">
               <i class="bi bi-journal-richtext"></i>
               <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Projects</strong> <span>Academic projects completed</span></p>
+              <p><strong>{{ t('Stat2_title') }}</strong> <span>{{ t('Stat2_meaning') }}</span></p>
             </div>
           </div><!-- End Stats Item -->
   
@@ -114,7 +114,7 @@
             <div class="stats-item">
               <i class="bi bi-headset"></i>
               <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Internship</strong> <span>Number of internhip realized</span></p>
+              <p><strong>{{ t('Stat3_title') }}</strong> <span>{{ t('Stat3_meaning') }}</span></p>
             </div>
           </div><!-- End Stats Item -->
   
@@ -122,7 +122,7 @@
             <div class="stats-item">
               <i class="bi bi-people"></i>
               <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Publications</strong> <span>Papers and articles published</span></p>
+              <p><strong>{{ t('Stat4_title') }}</strong> <span>{{ t('Stat4_meaning') }}</span></p>
             </div>
           </div><!-- End Stats Item -->
   
@@ -140,8 +140,8 @@
   
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p>Skills developed throughout my training in bioinformatics, during my academic projects and my professional internships</p>
+        <h2>{{ t('Skills') }}</h2>
+        <p>{{ t('Skills_sentence') }}</p>
       </div><!-- End Section Title -->
   
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -151,21 +151,21 @@
           <div class="col-lg-6">
   
             <div class="progress">
-              <span class="skill"><span>Python</span> <i class="val">100%</i></span>
+              <span class="skill"><span>{{ t('Skill_1') }}</span> <i class="val">100%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div><!-- End Skills Item -->
   
             <div class="progress">
-              <span class="skill"><span>R</span> <i class="val">100%</i></span>
+              <span class="skill"><span>{{ t('Skill_2') }}</span> <i class="val">100%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div><!-- End Skills Item -->
   
             <div class="progress">
-              <span class="skill"><span>Statistics</span> <i class="val">75%</i></span>
+              <span class="skill"><span>{{ t('Skill_3') }}</span> <i class="val">75%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
@@ -176,21 +176,21 @@
           <div class="col-lg-6">
   
             <div class="progress">
-              <span class="skill"><span>Spatial & Multiomics analysis</span> <i class="val">80%</i></span>
+              <span class="skill"><span>{{ t('Skill_4') }}</span> <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div><!-- End Skills Item -->
   
             <div class="progress">
-              <span class="skill"><span>SQL Database</span> <i class="val">50%</i></span>
+              <span class="skill"><span>{{ t('Skill_5') }}</span> <i class="val">50%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div><!-- End Skills Item -->
   
             <div class="progress">
-              <span class="skill"><span>Machine Learning</span> <i class="val">70%</i></span>
+              <span class="skill"><span>{{ t('Skill_6') }}</span> <i class="val">70%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
@@ -212,11 +212,11 @@
 
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
-      <h2>Resume</h2>
-      <p>Master's student in Bioinformatics with a strong passion for immunology, drug design, and multi-omics analyses. My academic background includes research experiences and advanced bioinformatics expertise.</p>
+      <h2>{{ t('Resume') }}</h2>
+      <p>{{ t('resume_desc') }}</p>
       <br>
       <a href="/download-cv" class="btn btn-primary" download>
-        Download my resume</a>
+        {{ t('download_cv') }}</a>
     
   </div><!-- End Section Title -->
 
@@ -225,64 +225,64 @@
       <div class="row">
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="resume-title">Summary</h3>
+              <h3 class="resume-title">{{ t('Summary') }}</h3>
 
               <div class="resume-item pb-0">
                   <h4>Jordan Dutel</h4>
-                  <p><em>I'm a autonomous, proactive, and curious student with expertise in bioinformatics, multi-omics data analysis, and molecular biology. Motivated by innovation and scientific challenges.</em></p>
+                  <p><em>{{ t('Summary_sentence') }}</em></p>
                   <ul>
-                      <li>Lyon, France</li>
-                      <li>+33 6 36 85 52 78</li>
-                      <li>jordan.dutel.contact@gmail.com</li>
+                      <li>{{ t('Localisation_name') }}</li>
+                      <li>{{ t('Phone_number') }}</li>
+                      <li>{{ t('Email') }}</li>
                       <li><a href="https://www.linkedin.com/in/jordan-dutel">LinkedIn</a></li>
                   </ul>
               </div><!-- End Resume Item -->
 
-              <h3 class="resume-title">Education</h3>
+              <h3 class="resume-title">{{ t('Education') }}</h3>
               <div class="resume-item">
-                  <h4>Master’s Degree in Bioinformatics</h4>
+                  <h4>{{ t('Education_name_1') }}</h4>
                   <h5>2023 - 2025</h5>
-                  <p><em>Université Claude Bernard Lyon 1</em></p>
-                  <p>Skills: Machine learning techniques, bayesian statistics, structural bioinformatics & drug design, multi-omics data analysis (genomics, metagenomics, transcriptomics, and proteomics), database management, web programming, advanced algorithmics.</p>
+                  <p><em>{{ t('Education_establishment_1') }}</em></p>
+                  <p>{{ t('Education_skills_1') }}</p>
               </div>
 
               <div class="resume-item">
-                  <h4>Master’s Degree in Molecular Biology & Immunology</h4>
+                  <h4>{{ t('Education_name_2') }}</h4>
                   <h5>2021 - 2023</h5>
-                  <p><em>Université Claude Bernard Lyon 1</em></p>
-                  <p>Skills: Immunology, immunopathology, cancer biology, genetic mapping, microscopy (electron, epifluorescence, confocal), RNA interference (Zebrafish embryo microinjection).</p>
+                  <p><em>{{ t('Education_establishment_2') }}</em></p>
+                  <p>{{ t('Education_skills_2') }}</p>
               </div>
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-              <h3 class="resume-title">Professional Experience</h3>
+              <h3 class="resume-title">{{ t('Prof_experience') }}</h3>
               <div class="resume-item">
-                  <h4>Data Science Research Intern</h4>
-                  <h5>April - June 2024</h5>
-                  <p><em>Centre Léon Bérard, Prevention & Public Health Team, Lyon</em></p>
+                  <h4>{{ t('Prof_experience_name_1') }}</h4>
+                  <h5>{{ t('Prof_experience_duration_1') }}</h5>
+                  <p><em>{{ t('Prof_experience_establishment_1') }}</em></p>
                   <ul>
-                      <li>Performed in-depth OMICS data analysis on a patient cohort to study mutational and immunological profiles.</li>
-                      <li>Used advanced factorial analysis (MOFA) to characterize patient subgroups and optimize personalized therapeutic strategies.</li>
+                      <li>{{ t('Prof_experience_description_1_skill_1') }}</li>
+                      <li>{{ t('Prof_experience_description_1_skill_2') }}</li>
                   </ul>
               </div><!-- End Resume Item -->
 
               <div class="resume-item">
-                  <h4>Research Intern in Immuno-Oncology</h4>
-                  <h5>January - June 2023</h5>
-                  <p><em>CRCL (Cancer Research Center of Lyon), GRINBERG Team, Lyon</em></p>
+                  <h4>{{ t('Prof_experience_name_2') }}</h4>
+                  <h5>{{ t('Prof_experience_duration_2') }}</h5>
+                  <p><em>{{ t('Prof_experience_establishment_2') }}</em></p>
                   <ul>
-                      <li>Studied NF-kB transcription factor subunits in CD4+ T lymphocytes and their implications in autoimmune diseases and cancer.</li>
-                      <li>Performed gene knockout via CRISPR-Cas9, flow cytometry (BD LSR Fortessa), and protein detection using ELISA (TransAM Assay).</li>
+                      <li>{{ t('Prof_experience_description_2_skill_1') }}</li>
+                      <li>{{ t('Prof_experience_description_2_skill_2') }}</li>
                   </ul>
               </div>
 
               <div class="resume-item">
-                  <h4>Virology Research Intern</h4>
-                  <h5>January - March 2022</h5>
-                  <p><em>CIRI (International Center for Infectiology Research), REVE Team, Lyon</em></p>
+                  <h4>{{ t('Prof_experience_name_3') }}</h4>
+                  <h5>{{ t('Prof_experience_duration_3') }}</h5>
+                  <p><em>{{ t('Prof_experience_establishment_3') }}</em></p>
                   <ul>
-                      <li>Developed a novel RNA vectorization system using the human pseudo-viral protein hPEG10.</li>
-                      <li>Performed plasmid cloning, RT-PCR, qPCR primer design, enzymatic digestion, and plasmid transfection.</li>
+                      <li>{{ t('Prof_experience_description_3_skill_1') }}</li>
+                      <li>{{ t('Prof_experience_description_3_skill_2') }}</li>
                   </ul>
               </div>
           </div>
@@ -301,8 +301,8 @@
 
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
-    <h2>Portfolio</h2>
-    <p>In this section, you can find all the projects I have worked on and developed.</p>
+    <h2>{{ t('Portfolio') }}</h2>
+    <p>{{ t('Portfolio_description') }}</p>
   </div><!-- End Section Title -->
 
   <div class="container">
@@ -310,11 +310,11 @@
     <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
       <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-        <li data-filter="*" class="filter-active">All</li>
-        <li data-filter=".filter-app">Metagenomics</li>
-        <li data-filter=".filter-product">RNAseq Analysis</li>
-        <li data-filter=".filter-branding">Proteomics</li>
-        <li data-filter=".filter-books">Spatial OMICS</li>
+        <li data-filter="*" class="filter-active">{{ t('All') }}</li>
+        <li data-filter=".filter-app">{{ t('Portfolio_keyword_project_1') }}</li>
+        <li data-filter=".filter-product">{{ t('Portfolio_keyword_project_2') }}</li>
+        <li data-filter=".filter-branding">{{ t('Portfolio_keyword_project_3') }}</li>
+        <li data-filter=".filter-books">{{ t('Portfolio_keyword_project_4') }}</li>
       </ul><!-- End Portfolio Filters -->
 
       <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
@@ -323,10 +323,10 @@
           <div class="portfolio-content h-100">
             <img src="{{ url_for('static', filename='assets/img/portfolio/Workflow.png') }}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Metagenomics</h4>
-              <p>Plasmid and ARG Analysis in Soil Metagenomes</p>
-              <a href="{{ url_for('static', filename='assets/img/portfolio/Workflow.png') }}" title="Metagenomics" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="{{ url_for('portfolio_project', project_id=1) }}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              <h4>{{ t('Portfolio_keyword_project_1') }}</h4>
+              <p>{{ t('Portfolio_description_project_1') }}</p>
+              <a href="{{ url_for('static', filename='assets/img/portfolio/Workflow.png') }}" title="{{ t('Portfolio_keyword_project_1') }}" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{{ url_for('portfolio_project', project_id=1) }}" title="{{ t('More_details') }}" class="details-link"><i class="bi bi-link-45deg"></i></a>
             </div>
           </div>
         </div><!-- End Portfolio Item -->
@@ -335,10 +335,10 @@
           <div class="portfolio-content h-100">
             <img src="{{ url_for('static', filename='assets/img/portfolio/Dataset_description.png') }}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>RNAseq Analysis</h4>
-              <p>Alternative splicing analysis in plasmacytoïd dendritics cells</p>
-              <a href="{{ url_for('static', filename='assets/img/portfolio/Dataset_description.png') }}" title="RNAseq Analysis" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="{{ url_for('portfolio_project', project_id=2) }}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              <h4>{{ t('Portfolio_keyword_project_2') }}</h4>
+              <p>{{ t('Portfolio_description_project_2') }}</p>
+              <a href="{{ url_for('static', filename='assets/img/portfolio/Dataset_description.png') }}" title="{{ t('Portfolio_keyword_project_2') }}" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{{ url_for('portfolio_project', project_id=2) }}" title="{{ t('More_details') }}" class="details-link"><i class="bi bi-link-45deg"></i></a>
             </div>
           </div>
         </div><!-- End Portfolio Item -->
@@ -347,10 +347,10 @@
           <div class="portfolio-content h-100">
             <img src="{{ url_for('static', filename='assets/img/portfolio/Pipeline_2.png') }}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>RNAseq Analysis</h4>
-              <p>Alternative splicing analysis in plasmacytoïd dendritics cells</p>
-              <a href="{{ url_for('static', filename='assets/img/portfolio/Pipeline_2.png') }}" title="RNAseq Analysis" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="{{ url_for('portfolio_project', project_id=2) }}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              <h4>{{ t('Portfolio_keyword_project_2') }}</h4>
+              <p>{{ t('Portfolio_description_project_2') }}</p>
+              <a href="{{ url_for('static', filename='assets/img/portfolio/Pipeline_2.png') }}" title="{{ t('Portfolio_keyword_project_2') }}" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{{ url_for('portfolio_project', project_id=2) }}" title="{{ t('More_details') }}" class="details-link"><i class="bi bi-link-45deg"></i></a>
             </div>
           </div>
         </div><!-- End Portfolio Item -->
@@ -359,10 +359,10 @@
           <div class="portfolio-content h-100">
             <img src="{{ url_for('static', filename='assets/img/portfolio/workflow3.png') }}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Proteomics</h4>
-              <p>Proteomic and Defensome Project</p>
-              <a href="{{ url_for('static', filename='assets/img/portfolio/workflow3.png') }}" title="Proteomics" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="{{ url_for('portfolio_project', project_id=3) }}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              <h4>{{ t('Portfolio_keyword_project_3') }}</h4>
+              <p>{{ t('Portfolio_description_project_3') }}</p>
+              <a href="{{ url_for('static', filename='assets/img/portfolio/workflow3.png') }}" title="{{ t('Portfolio_keyword_project_3') }}" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{{ url_for('portfolio_project', project_id=3) }}" title="{{ t('More_details') }}" class="details-link"><i class="bi bi-link-45deg"></i></a>
             </div>
           </div>
         </div><!-- End Portfolio Item -->
@@ -371,10 +371,10 @@
           <div class="portfolio-content h-100">
             <img src="{{ url_for('static', filename='assets/img/portfolio/shiny.png') }}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Proteomics</h4>
-              <p>Proteomic and Defensome Project</p>
-              <a href="{{ url_for('static', filename='assets/img/portfolio/shiny.png') }}" title="Proteomics" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="{{ url_for('portfolio_project', project_id=3) }}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              <h4>{{ t('Portfolio_keyword_project_3') }}</h4>
+              <p>{{ t('Portfolio_description_project_3') }}</p>
+              <a href="{{ url_for('static', filename='assets/img/portfolio/shiny.png') }}" title="{{ t('Portfolio_keyword_project_3') }}" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{{ url_for('portfolio_project', project_id=3) }}" title="{{ t('More_details') }}" class="details-link"><i class="bi bi-link-45deg"></i></a>
             </div>
           </div>
         </div><!-- End Portfolio Item -->
@@ -383,10 +383,10 @@
           <div class="portfolio-content h-100">
             <img src="{{ url_for('static', filename='assets/img/portfolio/spatial.png') }}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Spatial OMICS</h4>
-              <p>Spatial transcriptomics and breast cancer</p>
-              <a href="{{ url_for('static', filename='assets/img/portfolio/spatial.png') }}" title="Spatial OMICS" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="{{ url_for('portfolio_project', project_id=4) }}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              <h4>{{ t('Portfolio_keyword_project_4') }}</h4>
+              <p>{{ t('Portfolio_description_project_4') }}</p>
+              <a href="{{ url_for('static', filename='assets/img/portfolio/spatial.png') }}" title="{{ t('Portfolio_keyword_project_4') }}" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{{ url_for('portfolio_project', project_id=4) }}" title="{{ t('More_details') }}" class="details-link"><i class="bi bi-link-45deg"></i></a>
             </div>
           </div>
         </div><!-- End Portfolio Item -->
@@ -410,7 +410,7 @@
 
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-      <h2>Services</h2>
+      <h2>{{ t('Services') }}</h2>
       <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
     </div><!-- End Section Title -->
 
@@ -481,7 +481,7 @@
 
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-      <h2>Testimonials</h2>
+      <h2>{{ t('Testimonials') }}</h2>
       <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
     </div><!-- End Section Title -->
 
@@ -596,8 +596,8 @@
 
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
-    <h2>Contact</h2>
-    <p>If you are interested in connecting, feel free to reach out via email or LinkedIn</p>
+    <h2>{{ t('Contact') }}</h2>
+    <p>{{ t('contact_desc') }}</p>
   </div><!-- End Section Title -->
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -610,7 +610,7 @@
           <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
             <i class="bi bi-geo-alt flex-shrink-0"></i>
             <div>
-              <h3>Address</h3>
+              <h3>{{ t('Address') }}</h3>
               <p>La Doua, Lyon, France</p>
             </div>
           </div><!-- End Info Item -->
@@ -618,15 +618,15 @@
           <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
             <i class="bi bi-telephone flex-shrink-0"></i>
             <div>
-              <h3>Call Me</h3>
-              <p>+33 36 85 52 78</p>
+              <h3>{{ t('Call Me') }}</h3>
+              <p>{{ t('Phone_number') }}</p>
             </div>
           </div><!-- End Info Item -->
 
           <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
             <i class="bi bi-envelope flex-shrink-0"></i>
             <div>
-              <h3>Email Me</h3>
+              <h3>{{ t('Email Me') }}</h3>
               <p>jordan.dutel.contact@gmail.com</p>
             </div>
           </div><!-- End Info Item -->

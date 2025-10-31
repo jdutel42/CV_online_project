@@ -7,8 +7,8 @@
 
     <!-- Page Title -->
     <div class="page-title dark-background">
-      <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+  <div class="container d-lg-flex justify-content-between align-items-center">
+  <h1 class="mb-2 mb-lg-0">{{ t('portfolio_details_title') }}</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
@@ -71,19 +71,21 @@
 
           <div class="col-lg-4">
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Project information
+              <h3>{{ t('project_information') }}
               </h3>
               <ul>
-                <li><strong>Category</strong>: Proteomic, Phylogeny</li>
-                <li><strong>Laboratory</strong>: INRAE</li>
-                <li><strong>Project date</strong>: 15 September, 2024</li>
-                <li><strong>Project URL</strong>: <a href="http://pedago-service.univ-lyon1.fr:2325/jdutel/proteomic-and-defensome-project">GitLab project</a></li>
+                <li><strong>{{ t('category') }}</strong>: Proteomic, Phylogeny</li>
+                <li><strong>{{ t('laboratory') }}</strong>: INRAE</li>
+                <li><strong>{{ t('project_date') }}</strong>: 15 September, 2024</li>
+                <li><strong>{{ t('project_url') }}</strong>: <a href="http://pedago-service.univ-lyon1.fr:2325/jdutel/proteomic-and-defensome-project">GitLab project</a></li>
               </ul>
             </div>
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
               <h2>Identification of proteomic biomarkers from the chemical defensome of wild fish species</h2>
               <p>
-                This project focuses on identifying proteomic biomarkers from the chemical defensome of wild fish species. By integrating bioinformatics tools and computational workflows, we aim to analyze genomic and proteomic data to understand the responses of these species to environmental stressors. The project also explores potential biomarkers for ecological monitoring and risk assessment.            </div>
+                This project focuses on identifying proteomic biomarkers from the chemical defensome of wild fish species. By integrating bioinformatics tools and computational workflows, we aim to analyze genomic and proteomic data to understand the responses of these species to environmental stressors. The project also explores potential biomarkers for ecological monitoring and risk assessment.
+              </p>
+            </div>
           </div>
 
         </div>

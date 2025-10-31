@@ -8,9 +8,9 @@
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
     <h2>Jordan Dutel</h2>
-    <p>I am <span class="typed" data-typed-items="bioinformatician, immunologist, in data science, in immuno-informatics"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+    <p>I am <span class="typed" data-typed-items="{{ t('typed_items') }}"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
     <div class="mt-3">
-      <a href="{{ url_for('download_cv') }}" class="btn btn-primary btn-lg" role="button">Télécharger mon CV (PDF)</a>
+      <a href="{{ url_for('download_cv') }}" class="btn btn-primary btn-lg" role="button">{{ t('download_cv') }}</a>
     </div>
   </div>
 

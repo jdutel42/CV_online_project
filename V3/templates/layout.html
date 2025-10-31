@@ -11,6 +11,11 @@
   <meta name="robots" content="index, follow">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ url_for('sitemap') }}">
   <link rel="canonical" href="https://jordandutel.com/">
+  <!-- hreflang for language specific URLs (generated per-page) -->
+  {% if alternate_urls is defined %}
+    <link rel="alternate" hreflang="en" href="{{ alternate_urls.en }}" />
+    <link rel="alternate" hreflang="fr" href="{{ alternate_urls.fr }}" />
+  {% endif %}
   <!-- Open Graph / Social meta -->
   <meta property="og:title" content="Jordan Dutel — Bioinformatician" />
   <meta property="og:description" content="Master student in Bioinformatics. Multi-omics analyst, immunology and RNA-seq specialist. Portfolio and CV online." />
@@ -99,42 +104,58 @@
       <a href="https://github.com/jdutel42/" class="github"><i class="bi bi-github"></i></a>
     </div>
 
+    <!-- Language toggle: switch to /fr prefix for French (SEO friendly) -->
+    <div class="language-toggle text-center mt-2">
+      {% set p = request.path %}
+      {% if p.startswith('/fr') %}
+        {# currently french, link to english (remove /fr prefix) #}
+        {% set en_path = p[3:] if p|length > 3 else '/' %}
+        <a class="btn btn-sm btn-outline-light me-1" href="{{ en_path }}">EN</a>
+        <a class="btn btn-sm btn-primary" href="{{ p }}">FR</a>
+      {% else %}
+        {# currently english or default, link to french with /fr prefix #}
+        {% set fr_path = '/fr' + (p if p != '/' else '/') %}
+        <a class="btn btn-sm btn-outline-light me-1" href="{{ p }}">EN</a>
+        <a class="btn btn-sm btn-outline-light" href="{{ fr_path }}">FR</a>
+      {% endif %}
+    </div>
+
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>{{ t('Home') }}</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i>{{ t('About') }}</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i>{{ t('Resume') }}</a></li>
         <!-- <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li> -->
         <!-- <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li> -->
-        <li class="dropdown"><a href="#portfolio"><i class="bi bi-journal-code navicon"></i> <span>Portfolio</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <li class="dropdown"><a href="#portfolio"><i class="bi bi-journal-code navicon"></i> <span>{{ t('Portfolio') }}</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
-            <li class="dropdown"><a href="{{ url_for('portfolio_project', project_id=1) }}"><span>ARG Detection</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li class="dropdown"><a href="{{ url_for('portfolio_project', project_id=1) }}"><span>{{ t('Title_project1') }}</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                    <li><a href="{{ url_for('portfolio_project', project_id=1) }}">Context</a></li>
-                    <li><a href="{{ url_for('portfolio_project', project_id=1) }}">Deliverable</a></li>
+                    <li><a href="{{ url_for('portfolio_project', project_id=1) }}">{{ t('Context') }}</a></li>
+                    <li><a href="{{ url_for('portfolio_project', project_id=1) }}">{{ t('Deliverable') }}</a></li>
                 </ul>
             </li>
-            <li class="dropdown"><a href="{{ url_for('portfolio_project', project_id=2) }}"><span>pDC RNAseq</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li class="dropdown"><a href="{{ url_for('portfolio_project', project_id=2) }}"><span>{{ t('Title_project2') }}</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                    <li><a href="{{ url_for('portfolio_project', project_id=2) }}">Context</a></li>
-                    <li><a href="{{ url_for('portfolio_project', project_id=2) }}">Deliverable</a></li>
+                    <li><a href="{{ url_for('portfolio_project', project_id=2) }}">{{ t('Context') }}</a></li>
+                    <li><a href="{{ url_for('portfolio_project', project_id=2) }}">{{ t('Deliverable') }}</a></li>
                 </ul>
             </li>
-            <li class="dropdown"><a href="{{ url_for('portfolio_project', project_id=3) }}"><span>PeptideFinder</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li class="dropdown"><a href="{{ url_for('portfolio_project', project_id=3) }}"><span>{{ t('Title_project3') }}</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                    <li><a href="{{ url_for('portfolio_project', project_id=3) }}">Context</a></li>
-                    <li><a href="{{ url_for('portfolio_project', project_id=3) }}">Deliverable</a></li>
+                    <li><a href="{{ url_for('portfolio_project', project_id=3) }}">{{ t('Context') }}</a></li>
+                    <li><a href="{{ url_for('portfolio_project', project_id=3) }}">{{ t('Deliverable') }}</a></li>
                 </ul>
             </li>
-            <li class="dropdown"><a href="{{ url_for('portfolio_project', project_id=4) }}"><span>Spatial OMICS</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li class="dropdown"><a href="{{ url_for('portfolio_project', project_id=4) }}"><span>{{ t('Title_project4') }}</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                    <li><a href="{{ url_for('portfolio_project', project_id=4) }}">Context</a></li>
-                    <li><a href="{{ url_for('portfolio_project', project_id=4) }}">Deliverable</a></li>
+                    <li><a href="{{ url_for('portfolio_project', project_id=4) }}">{{ t('Context') }}</a></li>
+                    <li><a href="{{ url_for('portfolio_project', project_id=4) }}">{{ t('Deliverable') }}</a></li>
                 </ul>
             </li>
           </ul>
         </li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i>{{ t('Contact') }}</a></li>
       </ul>
     </nav>
 

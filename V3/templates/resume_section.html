@@ -6,10 +6,10 @@
 
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
-      <h2>Resume</h2>
-      <p>Master's student in Bioinformatics with a strong passion for immunology, drug design, and multi-omics analyses. My academic background includes research experiences and advanced bioinformatics expertise.</p>
-            <br>
-            <a href="{{ url_for('download_cv') }}" class="btn btn-primary" role="button">Télécharger mon CV (PDF)</a>
+      <h2>{{ t('resume_title') }}</h2>
+      <p>{{ t('resume_desc') }}</p>
+      <br>
+      <a href="{{ url_for('download_cv') }}" class="btn btn-primary" role="button">{{ t('download_cv') }}</a>
     
   </div><!-- End Section Title -->
 
