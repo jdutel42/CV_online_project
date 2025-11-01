@@ -3,8 +3,14 @@
 {% block content_all %}
 
 
-{% block content_hero %}
+
+
+
+
 <!-- Hero Section -->
+
+{% block content_hero %}
+
 <section id="hero" class="hero section dark-background">
 
     <img src="{{ url_for('static', filename='assets/img/un-grossissement-a-grande-echelle-devoile-l-anatomie-des-cellules-cancereuses-generee-par-l-ia.jpg') }}" alt="" data-aos="fade-in" class="">
@@ -15,14 +21,24 @@
     </div>
 
 </section>
-<!-- /Hero Section -->
+
 {% endblock %}
 
+<!-- /Hero Section -->
 
 
+
+
+
+
+
+
+
+
+<!-- About Section -->
 
 {% block content_about %}
-<!-- About Section -->
+
 <section id="about" class="about section">
 
   <!-- Section Title -->
@@ -83,11 +99,21 @@
 
   </div>
 
-</section><!-- /About Section -->
+</section>
+
   {% endblock %}
 
+<!-- /About Section -->
+
+
+
+
+
+
+<!-- Stats Section -->
+
   {% block content_stats %}
-  <!-- Stats Section -->
+
   <section id="stats" class="stats section">
   
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -96,7 +122,7 @@
   
           <div class="col-lg-3 col-md-6">
             <div class="stats-item">
-              <i class="bi bi-emoji-smile"></i>
+              <i class="bi bi-card-checklist">  </i>
               <span data-purecounter-start="0" data-purecounter-end="828" data-purecounter-duration="1" class="purecounter"></span>
               <p><strong>{{ t('Stat1_title') }}</strong> <span>{{ t('Stat1_meaning') }}</span></p>
             </div>
@@ -112,7 +138,7 @@
   
           <div class="col-lg-3 col-md-6">
             <div class="stats-item">
-              <i class="bi bi-headset"></i>
+              <i class="bi bi-briefcase"></i>
               <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
               <p><strong>{{ t('Stat3_title') }}</strong> <span>{{ t('Stat3_meaning') }}</span></p>
             </div>
@@ -130,12 +156,24 @@
   
       </div>
   
-    </section><!-- /Stats Section -->
+    </section>
   
   {% endblock %}
 
-  {% block content_skills %}
+  <!-- /Stats Section -->
+
+
+
+
+
+
+
+
+
+
   <!-- Skills Section -->
+
+  {% block content_skills %}
   <section id="skills" class="skills section light-background">
   
       <!-- Section Title -->
@@ -202,13 +240,24 @@
   
       </div>
   
-    </section><!-- /Skills Section -->
+    </section>
   
   {% endblock %}
 
-  {% block content_resume %}
+<!-- /Skills Section -->
+
+
+
+
+
+
+
+
 <!-- Resume Section -->
-<section id="resume" class="resume section">
+
+  {% block content_resume %}
+
+  <section id="resume" class="resume section">
 
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
@@ -233,7 +282,7 @@
                   <ul>
                       <li>{{ t('Localisation_name') }}</li>
                       <li>{{ t('Phone_number') }}</li>
-                      <li>{{ t('Email') }}</li>
+                      <li><a href="mailto:jordan.dutel.contact@gmail.com">Email</a></li>
                       <li><a href="https://www.linkedin.com/in/jordan-dutel">LinkedIn</a></li>
                   </ul>
               </div><!-- End Resume Item -->
@@ -252,10 +301,20 @@
                   <p><em>{{ t('Education_establishment_2') }}</em></p>
                   <p>{{ t('Education_skills_2') }}</p>
               </div>
-          </div>
+          </div><!-- End Resume Item -->
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
               <h3 class="resume-title">{{ t('Prof_experience') }}</h3>
+              <div class="resume-item">
+                  <h4>{{ t('Prof_experience_name_4') }}</h4>
+                  <h5>{{ t('Prof_experience_duration_4') }}</h5>
+                  <p><em>{{ t('Prof_experience_establishment_4') }}</em></p>
+                  <ul>
+                      <li>{{ t('Prof_experience_description_4_skill_1') }}</li>
+                      <li>{{ t('Prof_experience_description_4_skill_2') }}</li>
+                  </ul>
+              </div>
+
               <div class="resume-item">
                   <h4>{{ t('Prof_experience_name_1') }}</h4>
                   <h5>{{ t('Prof_experience_duration_1') }}</h5>
@@ -264,7 +323,7 @@
                       <li>{{ t('Prof_experience_description_1_skill_1') }}</li>
                       <li>{{ t('Prof_experience_description_1_skill_2') }}</li>
                   </ul>
-              </div><!-- End Resume Item -->
+              </div>
 
               <div class="resume-item">
                   <h4>{{ t('Prof_experience_name_2') }}</h4>
@@ -284,19 +343,33 @@
                       <li>{{ t('Prof_experience_description_3_skill_1') }}</li>
                       <li>{{ t('Prof_experience_description_3_skill_2') }}</li>
                   </ul>
-              </div>
+              </div><!-- End Resume Item -->
           </div>
 
       </div>
 
   </div>
 
-</section><!-- /Resume Section -->
+</section>
 
 {% endblock %}
 
-{% block content_portfolio %}
+<!-- /Resume Section -->
+
+
+
+
+
+
+
+
+
+
+
 <!-- Portfolio Section -->
+
+{% block content_portfolio %}
+
 <section id="portfolio" class="portfolio section light-background">
 
   <!-- Section Title -->
@@ -398,14 +471,25 @@
     
   </div>
 
-  
-
-</section><!-- /Portfolio Section -->
+</section>
 
 {% endblock %}
 
-{% block content_services %}
+<!-- /Portfolio Section -->
+
+
+
+
+
+
+
+
+
+
 <!-- Services Section -->
+
+{% block content_services %}
+
 <section id="services" class="services section">
 
     <!-- Section Title -->
@@ -471,12 +555,24 @@
 
     </div>
 
-  </section><!-- /Services Section -->
+  </section>
 
 {% endblock %}
 
-{% block content_testimonials %}
+<!-- /Services Section -->
+
+
+
+
+
+
+
+
+
 <!-- Testimonials Section -->
+
+{% block content_testimonials %}
+
 <section id="testimonials" class="testimonials section light-background">
 
     <!-- Section Title -->
@@ -586,12 +682,23 @@
 
     </div>
 
-  </section><!-- /Testimonials Section -->
+  </section>
 
 {% endblock %}
 
-{% block content_contact %}
+<!-- /Testimonials Section -->
+
+
+
+
+
+
+
+
 <!-- Contact Section -->
+
+{% block content_contact %}
+
 <section id="contact" class="contact section">
 
   <!-- Section Title -->
@@ -627,7 +734,7 @@
             <i class="bi bi-envelope flex-shrink-0"></i>
             <div>
               <h3>{{ t('Email Me') }}</h3>
-              <p>jordan.dutel.contact@gmail.com</p>
+              <p><a href="mailto:jordan.dutel.contact@gmail.com">jordan.dutel.contact@gmail.com</a></p>
             </div>
           </div><!-- End Info Item -->
 
@@ -643,9 +750,19 @@
 
   </div>
 
-</section><!-- /Contact Section -->
+</section>
 
 {% endblock %}
+
+<!-- /Contact Section -->
+
+
+
+
+
+
+
+
 
 {% endblock %}
 

@@ -11,8 +11,8 @@
   <h1 class="mb-2 mb-lg-0">{{ t('portfolio_details_title') }}</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
+            <li><a href="index.html">{{ t('Home') }}</a></li>
+            <li class="current">{{ t('Portfolio_details') }}</li>
           </ol>
         </nav>
       </div>
@@ -43,8 +43,8 @@
                   }
                 }
               </script>
-              
-              <h1>Project n°{{ project_id }}</h1>
+
+              <h1>{{ t('Project') }} n°{{ project_id }}</h1>
 
               <div class="swiper-wrapper align-items-center">
 
@@ -74,16 +74,16 @@
               <h3>{{ t('project_information') }}
               </h3>
               <ul>
-                <li><strong>{{ t('category') }}</strong>: Proteomic, Phylogeny</li>
+                <li><strong>{{ t('category') }}</strong>: {{ t('Portfolio_keyword_project_3') }}, {{ t('Portfolio_keyword_2_project_3') }}</li>
                 <li><strong>{{ t('laboratory') }}</strong>: INRAE</li>
-                <li><strong>{{ t('project_date') }}</strong>: 15 September, 2024</li>
+                <li><strong>{{ t('project_date') }}</strong>: 15 {{ t('September') }}, 2024</li>
                 <li><strong>{{ t('project_url') }}</strong>: <a href="http://pedago-service.univ-lyon1.fr:2325/jdutel/proteomic-and-defensome-project">GitLab project</a></li>
               </ul>
             </div>
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Identification of proteomic biomarkers from the chemical defensome of wild fish species</h2>
+              <h2>{{ t('Portfolio_description_project_3') }}</h2>
               <p>
-                This project focuses on identifying proteomic biomarkers from the chemical defensome of wild fish species. By integrating bioinformatics tools and computational workflows, we aim to analyze genomic and proteomic data to understand the responses of these species to environmental stressors. The project also explores potential biomarkers for ecological monitoring and risk assessment.
+                {{ t('Portfolio_description_text_project_3') }}
               </p>
             </div>
           </div>

@@ -11,8 +11,8 @@
   <h1 class="mb-2 mb-lg-0">{{ t('portfolio_details_title') }}</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
+            <li><a href="index.html">{{ t('Home') }}</a></li>
+            <li class="current">{{ t('Portfolio_details') }}</li>
           </ol>
         </nav>
       </div>
@@ -43,8 +43,8 @@
                   }
                 }
               </script>
-              
-              <h1>Project n°{{ project_id }}</h1>
+
+              <h1>{{ t('Project') }} n°{{ project_id }}</h1>
 
               <div class="swiper-wrapper align-items-center">
 
@@ -74,16 +74,16 @@
               <h3>{{ t('project_information') }}
               </h3>
               <ul>
-                <li><strong>{{ t('category') }}</strong>: Metagenomic, Microbial Ecology</li>
+                <li><strong>{{ t('category') }}</strong>:{{ t('Portfolio_keyword_project_1') }}, {{ t('Portfolio_keyword_2_project_1') }}</li>
                 <li><strong>{{ t('laboratory') }}</strong>: CNRS UMR5557, INRAE UMR1418</li>
-                <li><strong>{{ t('project_date') }}</strong>: 01 March, 2020</li>
+                <li><strong>{{ t('project_date') }}</strong>: 01 {{ t('March') }}, 2020</li>
                 <li><strong>{{ t('project_url') }}</strong>: <a href="http://pedago-service.univ-lyon1.fr:2325/jdutel/arg_from_plasmid_in_metagenomic_data">GitLab project</a></li>
               </ul>
             </div>
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Plasmid and ARG Analysis in Soil Metagenomes</h2>
+              <h2>{{ t('Portfolio_description_project_1') }}</h2>
               <p>
-                This project leverages advanced bioinformatics tools to analyze plasmids and antibiotic resistance genes (ARGs) in soil metagenomes. Our aim is to elucidate the dynamics of ARGs within plasmid populations and their response to environmental factors.
+                {{ t('Portfolio_description_text_project_1') }}
               </p>
             </div>
           </div>
