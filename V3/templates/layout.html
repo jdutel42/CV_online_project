@@ -51,11 +51,13 @@
   </script>
 
   <!-- Favicons -->
-  <link href="{{ url_for('static', filename='assets/img/favicon.ico') }}" rel="icon">
-  <link href="{{ url_for('static', filename='assets/img/favicon.ico') }}" rel="apple-touch-icon">
-  <!-- root favicon for crawlers and search engines -->
-  <link rel="icon" href="{{ url_for('favicon') }}">
-  <link rel="shortcut icon" href="{{ url_for('favicon') }}">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/img/favicon/favicon-96x96.png') }}" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='assets/img/favicon/favicon.svg') }}" />
+  <link rel="shortcut icon" href="{{ url_for('static', filename='assets/img/favicon/favicon.ico') }}" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='assets/img/favicon/apple-touch-icon.png') }}" />
+  <link rel="manifest" href="{{ url_for('static', filename='assets/img/favicon/site.webmanifest') }}" />
+
+
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
