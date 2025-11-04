@@ -43,7 +43,7 @@ Feel free to fork and open pull requests for improvements or bug fixes.
 
 Jordan Dutel  
 Website: [jordandutel.com](https://jordandutel.com)  
-Email: jordan@example.com
+Email: jordan.dutel.contact@gmail.com
 
 ---
 
