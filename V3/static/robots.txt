@@ -1,5 +1,0 @@
-User-agent: *
-Disallow:
-
-# Sitemap for jordandutel.com
-Sitemap: https://jordandutel.com/sitemap.xml
