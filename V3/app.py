@@ -428,7 +428,7 @@ def section(section_name):
 @app.route("/portfolio/Project_<int:project_id>")
 def portfolio_project(project_id):
     if project_id == 1:
-        return render_template("portfolio-details_project1_copy.html", project_id=project_id)
+        return render_template("portfolio-details_project1.html", project_id=project_id)
     elif project_id == 2:
         return render_template("portfolio-details_project2.html", project_id=project_id)
     elif project_id == 3:
