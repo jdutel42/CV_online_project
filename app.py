@@ -472,7 +472,7 @@ def robots():
 # Serve favicon at root so crawlers and Google can easily find it
 @app.route('/favicon.ico')
 def favicon():
-    return send_from_directory('static', 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+    return send_from_directory('static', 'assets/img/favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 
 # ---------------------------------------------------------------------------------------
