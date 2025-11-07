@@ -65,7 +65,7 @@
             <ul>
               <li><i class="bi bi-chevron-right"></i> <strong>{{ t('Birthday') }}:</strong> <span>{{ t('Birthday_date') }} </span></li>
               <!-- <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.nope.com</span></li> -->
-              <li><i class="bi bi-chevron-right"></i> <strong>{{ t('Degree') }}:</strong> <span>{{ t('Degree_name') }} </span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>{{ t('Degree') }}:</strong> <span><a href="https://www.bioinfo-lyon.fr/">{{ t('Degree_name') }}</a></span></li>
               <li><i class="bi bi-chevron-right"></i> <strong>{{ t('Phone') }}:</strong> <span>{{ t('Phone_number') }} </span></li>
               <li><i class="bi bi-chevron-right"></i> <strong>{{ t('Localisation') }}:</strong> <span>{{ t('Localisation_name') }} </span></li>
             </ul>
@@ -85,8 +85,8 @@
                 if (el) el.textContent = age;
               })();
               </script>
-              <li><i class="bi bi-chevron-right"></i> <strong>{{ t('Establishment') }}:</strong> <span>{{ t('Establishment_name') }}</span></li>
-              <li><i class="bi bi-chevron-right"></i> <strong>{{ t('Email') }}:</strong> <span>jordan.dutel.contact@gmail.com</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>{{ t('Establishment') }}:</strong> <span><a href="https://www.univ-lyon1.fr/" target="_blank" rel="noopener noreferrer">{{ t('Establishment_name') }}</a></span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>{{ t('Email') }}:</strong> <span><a href="mailto:jordan.dutel.contact@gmail.com">jordan.dutel.contact@gmail.com</a></span></li>
               <li><i class="bi bi-chevron-right"></i> <strong>{{ t('Languages') }}:</strong> <span>{{ t('Language_list') }}</span></li>
             </ul>
           </div>
@@ -281,69 +281,142 @@
                   <p><em>{{ t('Summary_sentence') }}</em></p>
                   <ul>
                       <li>{{ t('Localisation_name') }}</li>
-                      <li>{{ t('Phone_number') }}</li>
+                      <li>
+                        <a href="tel:{{ t('Phone_number')|replace(' ', '')|replace('.', '')|replace('(', '')|replace(')', '')|replace('-', '') }}" aria-label="Appeler">{{ t('Phone_number') }}</a></li>
                       <li><a href="mailto:jordan.dutel.contact@gmail.com">Email</a></li>
                       <li><a href="https://www.linkedin.com/in/jordan-dutel">LinkedIn</a></li>
+                      <li><a href="https://github.com/jordan-dutel">GitHub</a></li>
                   </ul>
               </div><!-- End Resume Item -->
 
               <h3 class="resume-title">{{ t('Education') }}</h3>
-              <div class="resume-item">
+                <div class="resume-item interactive-card" role="link" tabindex="0"
+                  style="cursor:pointer; outline:none; box-shadow:0 1px 4px rgba(0,0,0,0.04); transition:transform .22s cubic-bezier(.2,.9,.2,1), box-shadow .22s cubic-bezier(.2,.9,.2,1); transform-origin:center; will-change:transform,box-shadow;"
+                  aria-label="Voir le master de bioinformatique"
+                  onclick="window.open('https://www.bioinfo-lyon.fr/','_blank')"
+                  onkeypress="if(event.key==='Enter' || event.key===' ') { window.open('https://www.bioinfo-lyon.fr/','_blank'); }"
+                  onmouseover="this.style.transform='translateY(-8px) scale(1.04) translateZ(18px)'; this.style.boxShadow='0 18px 40px rgba(0,0,0,0.18)'; this.style.zIndex=10;"
+                  onmouseout="this.style.transform=''; this.style.boxShadow='0 1px 4px rgba(0,0,0,0.04)'; this.style.zIndex='';"
+                  onfocus="this.style.transform='translateY(-8px) scale(1.04) translateZ(18px)'; this.style.boxShadow='0 18px 40px rgba(0,0,0,0.18)'; this.style.zIndex=10;"
+                  onblur="this.style.transform=''; this.style.boxShadow='0 1px 4px rgba(0,0,0,0.04)'; this.style.zIndex='';">
+                  <br>
                   <h4>{{ t('Education_name_1') }}</h4>
                   <h5>2023 - 2025</h5>
-                  <p><em>{{ t('Education_establishment_1') }}</em></p>
+                  <p><em><a href="https://www.univ-lyon1.fr/" target="_blank" rel="noopener noreferrer">{{ t('Education_establishment_1') }}</a></em></p>
                   <p>{{ t('Education_skills_1') }}</p>
-              </div>
+                </div>
 
-              <div class="resume-item">
-                  <h4>{{ t('Education_name_2') }}</h4>
-                  <h5>2021 - 2023</h5>
-                  <p><em>{{ t('Education_establishment_2') }}</em></p>
-                  <p>{{ t('Education_skills_2') }}</p>
+                <div class="resume-item interactive-card" role="link" tabindex="0"
+                style="cursor:pointer; outline:none; box-shadow:0 1px 4px rgba(0,0,0,0.04); transition:transform .22s cubic-bezier(.2,.9,.2,1), box-shadow .22s cubic-bezier(.2,.9,.2,1); transform-origin:center; will-change:transform,box-shadow;"
+                aria-label="Voir le master de bioinformatique"
+                onclick="window.open('https://master-bmc.univ-lyon1.fr/icap_website/541/75732','_blank')"
+                onkeypress="if(event.key==='Enter' || event.key===' ') { window.open('https://master-bmc.univ-lyon1.fr/icap_website/541/75732','_blank'); }"
+                onmouseover="this.style.transform='translateY(-8px) scale(1.04) translateZ(18px)'; this.style.boxShadow='0 18px 40px rgba(0,0,0,0.18)'; this.style.zIndex=10;"
+                onmouseout="this.style.transform=''; this.style.boxShadow='0 1px 4px rgba(0,0,0,0.04)'; this.style.zIndex='';"
+                onfocus="this.style.transform='translateY(-8px) scale(1.04) translateZ(18px)'; this.style.boxShadow='0 18px 40px rgba(0,0,0,0.18)'; this.style.zIndex=10;"
+                onblur="this.style.transform=''; this.style.boxShadow='0 1px 4px rgba(0,0,0,0.04)'; this.style.zIndex='';">
+                <br>
+                <h4>{{ t('Education_name_2') }}</h4>
+                <h5>2021 - 2023</h5>
+                <p><em><a href="https://www.univ-lyon1.fr/" target="_blank" rel="noopener noreferrer">{{ t('Education_establishment_2') }}</a></em></p>
+                <p>{{ t('Education_skills_2') }}</p>
               </div>
-          </div><!-- End Resume Item -->
+          </div>
+          <!-- End Resume Item -->
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
               <h3 class="resume-title">{{ t('Prof_experience') }}</h3>
-              <div class="resume-item">
+                <div class="resume-item interactive-card"
+                   role="link"
+                   tabindex="0"
+                   style="cursor:pointer; outline:none; box-shadow:0 1px 4px rgba(0,0,0,0.04); transition:transform .22s cubic-bezier(.2,.9,.2,1), box-shadow .22s cubic-bezier(.2,.9,.2,1); transform-origin:center; will-change:transform,box-shadow;"
+                   aria-label="Voir l'expérience professionnelle 4"
+                   onclick="window.open('https://github.com/jdutel42/MpBC_project','_blank')"
+                   onkeypress="if(event.key==='Enter' || event.key===' ') { window.open('https://github.com/jdutel42/MpBC_project','_blank'); }"
+                   onmouseover="this.style.transform='translateY(-8px) scale(1.04) translateZ(18px)'; this.style.boxShadow='0 18px 40px rgba(0,0,0,0.18)'; this.style.zIndex=10;"
+                   onmouseout="this.style.transform=''; this.style.boxShadow='0 1px 4px rgba(0,0,0,0.04)'; this.style.zIndex='';"
+                   onfocus="this.style.transform='translateY(-8px) scale(1.04) translateZ(18px)'; this.style.boxShadow='0 18px 40px rgba(0,0,0,0.18)'; this.style.zIndex=10;"
+                   onblur="this.style.transform=''; this.style.boxShadow='0 1px 4px rgba(0,0,0,0.04)'; this.style.zIndex='';">
+                    <br>
                   <h4>{{ t('Prof_experience_name_4') }}</h4>
                   <h5>{{ t('Prof_experience_duration_4') }}</h5>
-                  <p><em>{{ t('Prof_experience_establishment_4') }}</em></p>
+                  <p><em>
+                  <a href="https://www.crcl.fr/equipes-de-recherche/analyse-integree-de-la-dynamique-du-cancer/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   onclick="event.stopPropagation();">
+                  {{ t('Prof_experience_establishment_4') }}</a></em></p>
                   <ul>
-                      <li>{{ t('Prof_experience_description_4_skill_1') }}</li>
-                      <li>{{ t('Prof_experience_description_4_skill_2') }}</li>
+                  <li>{{ t('Prof_experience_description_4_skill_1') }}</li>
+                  <li>{{ t('Prof_experience_description_4_skill_2') }}</li>
                   </ul>
-              </div>
+                </div>
 
-              <div class="resume-item">
+                <div class="resume-item interactive-card"
+                   role="link"
+                   tabindex="0"
+                   style="cursor:pointer; outline:none; box-shadow:0 1px 4px rgba(0,0,0,0.04); transition:transform .22s cubic-bezier(.2,.9,.2,1), box-shadow .22s cubic-bezier(.2,.9,.2,1); transform-origin:center; will-change:transform,box-shadow;"
+                   aria-label="Voir sur GitHub"
+                   onclick="window.open('https://github.com/jdutel42/Multi_Omics_M1_Bioinfo_Internship','_blank')"
+                   onkeypress="if(event.key==='Enter' || event.key===' ') { window.open('https://github.com/jdutel42/Multi_Omics_M1_Bioinfo_Internship','_blank'); }"
+                   onmouseover="this.style.transform='translateY(-8px) scale(1.04) translateZ(18px)'; this.style.boxShadow='0 18px 40px rgba(0,0,0,0.18)'; this.style.zIndex=10;"
+                   onmouseout="this.style.transform=''; this.style.boxShadow='0 1px 4px rgba(0,0,0,0.04)'; this.style.zIndex='';"
+                   onfocus="this.style.transform='translateY(-8px) scale(1.04) translateZ(18px)'; this.style.boxShadow='0 18px 40px rgba(0,0,0,0.18)'; this.style.zIndex=10;"
+                   onblur="this.style.transform=''; this.style.boxShadow='0 1px 4px rgba(0,0,0,0.04)'; this.style.zIndex='';">
+                    <br>
                   <h4>{{ t('Prof_experience_name_1') }}</h4>
                   <h5>{{ t('Prof_experience_duration_1') }}</h5>
-                  <p><em>{{ t('Prof_experience_establishment_1') }}</em></p>
+                  <p><em><a href="https://prevention.centreleonberard.fr/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">{{ t('Prof_experience_establishment_1') }}</a></em></p>
                   <ul>
-                      <li>{{ t('Prof_experience_description_1_skill_1') }}</li>
-                      <li>{{ t('Prof_experience_description_1_skill_2') }}</li>
+                  <li>{{ t('Prof_experience_description_1_skill_1') }}</li>
+                  <li>{{ t('Prof_experience_description_1_skill_2') }}</li>
                   </ul>
-              </div>
+                </div>
 
-              <div class="resume-item">
+                <div class="resume-item interactive-card"
+                   role="link"
+                   tabindex="0"
+                   style="cursor:pointer; outline:none; box-shadow:0 1px 4px rgba(0,0,0,0.04); transition:transform .22s cubic-bezier(.2,.9,.2,1), box-shadow .22s cubic-bezier(.2,.9,.2,1); transform-origin:center; will-change:transform,box-shadow;"
+                   aria-label="Voir sur ResearchGate"
+                   onclick="window.open('https://www.researchgate.net/profile/Jordan-Dutel','_blank')"
+                   onkeypress="if(event.key==='Enter' || event.key===' ') { window.open('https://www.researchgate.net/profile/Jordan-Dutel','_blank'); }"
+                   onmouseover="this.style.transform='translateY(-8px) scale(1.04) translateZ(18px)'; this.style.boxShadow='0 18px 40px rgba(0,0,0,0.18)'; this.style.zIndex=10;"
+                   onmouseout="this.style.transform=''; this.style.boxShadow='0 1px 4px rgba(0,0,0,0.04)'; this.style.zIndex='';"
+                   onfocus="this.style.transform='translateY(-8px) scale(1.04) translateZ(18px)'; this.style.boxShadow='0 18px 40px rgba(0,0,0,0.18)'; this.style.zIndex=10;"
+                   onblur="this.style.transform=''; this.style.boxShadow='0 1px 4px rgba(0,0,0,0.04)'; this.style.zIndex='';">
+                   <br>
                   <h4>{{ t('Prof_experience_name_2') }}</h4>
                   <h5>{{ t('Prof_experience_duration_2') }}</h5>
-                  <p><em>{{ t('Prof_experience_establishment_2') }}</em></p>
+                  <p><em><a href="https://www.crcl.fr/equipes-de-recherche/regulation-moleculaire-de-limmunite-dans-le-cancer/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">{{ t('Prof_experience_establishment_2') }}</a></em></p>
                   <ul>
-                      <li>{{ t('Prof_experience_description_2_skill_1') }}</li>
-                      <li>{{ t('Prof_experience_description_2_skill_2') }}</li>
+                  <li>{{ t('Prof_experience_description_2_skill_1') }}</li>
+                  <li>{{ t('Prof_experience_description_2_skill_2') }}</li>
                   </ul>
-              </div>
+                </div>
 
-              <div class="resume-item">
+
+                <div class="resume-item interactive-card"
+                   role="link"
+                   tabindex="0"
+                   style="cursor:pointer; outline:none; box-shadow:0 1px 4px rgba(0,0,0,0.04); transition:transform .22s cubic-bezier(.2,.9,.2,1), box-shadow .22s cubic-bezier(.2,.9,.2,1); transform-origin:center; will-change:transform,box-shadow;"
+                   aria-label="Voir sur ResearchGate"
+                   onclick="window.open('https://www.researchgate.net/profile/Jordan-Dutel','_blank')"
+                   onkeypress="if(event.key==='Enter' || event.key===' ') { window.open('https://www.researchgate.net/profile/Jordan-Dutel','_blank'); }"
+                   onmouseover="this.style.transform='translateY(-8px) scale(1.04) translateZ(18px)'; this.style.boxShadow='0 18px 40px rgba(0,0,0,0.18)'; this.style.zIndex=10;"
+                   onmouseout="this.style.transform=''; this.style.boxShadow='0 1px 4px rgba(0,0,0,0.04)'; this.style.zIndex='';"
+                   onfocus="this.style.transform='translateY(-8px) scale(1.04) translateZ(18px)'; this.style.boxShadow='0 18px 40px rgba(0,0,0,0.18)'; this.style.zIndex=10;"
+                   onblur="this.style.transform=''; this.style.boxShadow='0 1px 4px rgba(0,0,0,0.04)'; this.style.zIndex='';">
+                   <br>
+
                   <h4>{{ t('Prof_experience_name_3') }}</h4>
                   <h5>{{ t('Prof_experience_duration_3') }}</h5>
-                  <p><em>{{ t('Prof_experience_establishment_3') }}</em></p>
+                  <p><em><a href="https://ciri.ens-lyon.fr/teams/reve/intro" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">{{ t('Prof_experience_establishment_3') }}</a></em></p>
                   <ul>
-                      <li>{{ t('Prof_experience_description_3_skill_1') }}</li>
-                      <li>{{ t('Prof_experience_description_3_skill_2') }}</li>
+                  <li>{{ t('Prof_experience_description_3_skill_1') }}</li>
+                  <li>{{ t('Prof_experience_description_3_skill_2') }}</li>
                   </ul>
-              </div><!-- End Resume Item -->
+                </div>
+                <!-- End Resume Item -->
           </div>
 
       </div>
