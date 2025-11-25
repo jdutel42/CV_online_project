@@ -90,7 +90,7 @@
       <img src="{{ url_for('static', filename='assets/img/my_pp.jpeg') }}" alt="" class="img-fluid rounded-circle">
     </div>
 
-    <a href="{{ url_for('root') }}" class="logo d-flex align-items-center justify-content-center">
+  <a href="{{ url_for('root') }}" class="logo d-flex align-items-center justify-content-center" title="{{ t('Home') }}">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.png" alt=""> -->
       <h1 class="sitename">Jordan Dutel</h1>
@@ -100,9 +100,9 @@
       <!-- <a href="https://x.com/_PyroXene_" class="twitter"><i class="bi bi-twitter-x"></i></a> -->
       <!-- <a href="https://www.facebook.com/jordan.dutel.1/" class="facebook"><i class="bi bi-facebook"></i></a> -->
       <!-- <a href="https://www.instagram.com/jo.dtl/" class="instagram"><i class="bi bi-instagram"></i></a> -->
-      <a href="https://www.linkedin.com/in/jordan-dutel/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      <a href="http://pedago-service.univ-lyon1.fr:2325/jdutel" class="gitlab"><i class="bi bi-gitlab"></i></a>
-      <a href="https://github.com/jdutel42/" class="github"><i class="bi bi-github"></i></a>
+  <a href="https://www.linkedin.com/in/jordan-dutel/" class="linkedin" title="LinkedIn - Jordan Dutel"><i class="bi bi-linkedin"></i></a>
+  <a href="http://pedago-service.univ-lyon1.fr:2325/jdutel" class="gitlab" title="Pedago profile - Jordan Dutel"><i class="bi bi-gitlab"></i></a>
+  <a href="https://github.com/jdutel42/" class="github" title="GitHub - jdutel42"><i class="bi bi-github"></i></a>
     </div>
 
     <!-- Language toggle: switch to /fr prefix for French (SEO friendly) -->
@@ -111,21 +111,21 @@
       {% if p.startswith('/fr') %}
         {# currently french, link to english (remove /fr prefix) #}
         {% set en_path = p[3:] if p|length > 3 else '/' %}
-        <a class="btn btn-sm btn-outline-light me-1" href="{{ en_path }}">EN</a>
-        <a class="btn btn-sm btn-primary" href="{{ p }}">FR</a>
+  <a class="btn btn-sm btn-outline-light me-1" href="{{ en_path }}" title="Switch to English">EN</a>
+  <a class="btn btn-sm btn-primary" href="{{ p }}" title="Français">FR</a>
       {% else %}
         {# currently english or default, link to french with /fr prefix #}
         {% set fr_path = '/fr' + (p if p != '/' else '/') %}
-        <a class="btn btn-sm btn-outline-light me-1" href="{{ p }}">EN</a>
-        <a class="btn btn-sm btn-outline-light" href="{{ fr_path }}">FR</a>
+  <a class="btn btn-sm btn-outline-light me-1" href="{{ p }}" title="English">EN</a>
+  <a class="btn btn-sm btn-outline-light" href="{{ fr_path }}" title="Switch to French">FR</a>
       {% endif %}
     </div>
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="{{ url_for('root') }}" class="active"><i class="bi bi-house navicon"></i>{{ t('Home') }}</a></li>
-        <li><a href="{{ url_for('root') }}#about"><i class="bi bi-person navicon"></i>{{ t('About') }}</a></li>
-        <li><a href="{{ url_for('root') }}#resume"><i class="bi bi-file-earmark-text navicon"></i>{{ t('Resume') }}</a></li>
+  <li><a href="{{ url_for('root') }}" class="active" title="{{ t('Home') }}"><i class="bi bi-house navicon"></i>{{ t('Home') }}</a></li>
+  <li><a href="{{ url_for('root') }}#about" title="{{ t('About') }}"><i class="bi bi-person navicon"></i>{{ t('About') }}</a></li>
+  <li><a href="{{ url_for('root') }}#resume" title="{{ t('Resume') }}"><i class="bi bi-file-earmark-text navicon"></i>{{ t('Resume') }}</a></li>
         <!-- <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li> -->
         <!-- <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li> -->
         <li class="dropdown"><a href="{{ url_for('root') }}#portfolio"><i class="bi bi-journal-code navicon"></i> <span>{{ t('Portfolio') }}</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -172,7 +172,7 @@
   <h1 class="mb-2 mb-lg-0">{{ t('portfolio_details_title') }}</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="{{ url_for('root') }}">{{ t('Home') }}</a></li>
+            <li><a href="{{ url_for('root') }}" title="{{ t('Home') }}">{{ t('Home') }}</a></li>
             <li class="current">{{ t('Portfolio_details') }}</li>
           </ol>
         </nav>

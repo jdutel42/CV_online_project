@@ -42,6 +42,7 @@ def date():
 # -----------------------
 translations = {
     'en': {
+        'title_h1': 'Jordan Dutel | Bioinformatician • Multi-omics & RNA-seq Specialist',
         'Home': 'Home',
         'About': 'About',
         'Resume': 'Resume',
@@ -158,6 +159,7 @@ translations = {
         'contact_desc': 'If you are interested in connecting, feel free to reach out via email or LinkedIn'
     },
     'fr': {
+        'title_h1': 'Jordan Dutel | Bioinformaticien • Spécialiste Multi-omics & RNA-seq',
         'Home': 'Accueil',
         'About': 'À propos',
         'Resume': 'CV',
