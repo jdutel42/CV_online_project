@@ -147,7 +147,7 @@
           <div class="col-lg-3 col-md-6">
             <div class="stats-item">
               <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="21" data-purecounter-duration="1" class="purecounter"></span>
               <p><strong>{{ t('Stat4_title') }}</strong> <span>{{ t('Stat4_meaning') }}</span></p>
             </div>
           </div><!-- End Stats Item -->
@@ -337,6 +337,28 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
               <h3 class="resume-title">{{ t('Prof_experience') }}</h3>
+                
+                <div class="resume-item interactive-card"
+                   role="link"
+                   tabindex="0"
+                   style="cursor:pointer; outline:none; box-shadow:0 1px 4px rgba(0,0,0,0.04); transition:transform .22s cubic-bezier(.2,.9,.2,1), box-shadow .22s cubic-bezier(.2,.9,.2,1); transform-origin:center; will-change:transform,box-shadow;"
+                   aria-label="Voir sur GitHub"
+                   onclick="window.open('https://www.crct-inserm.fr/genim/','_blank')"
+                   onkeypress="if(event.key==='Enter' || event.key===' ') { window.open('https://www.crct-inserm.fr/genim/','_blank'); }"
+                   onmouseover="this.style.transform='translateY(-8px) scale(1.04) translateZ(18px)'; this.style.boxShadow='0 18px 40px rgba(0,0,0,0.18)'; this.style.zIndex=10;"
+                   onmouseout="this.style.transform=''; this.style.boxShadow='0 1px 4px rgba(0,0,0,0.04)'; this.style.zIndex='';"
+                   onfocus="this.style.transform='translateY(-8px) scale(1.04) translateZ(18px)'; this.style.boxShadow='0 18px 40px rgba(0,0,0,0.18)'; this.style.zIndex=10;"
+                   onblur="this.style.transform=''; this.style.boxShadow='0 1px 4px rgba(0,0,0,0.04)'; this.style.zIndex='';">
+                    <br>
+                  <h4>{{ t('Prof_experience_name_5') }}</h4>
+                  <h5>{{ t('Prof_experience_duration_5') }}</h5>
+                  <p><em><a href="https://www.crct-inserm.fr/genim/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" title="{{ t('Prof_experience_establishment_5') }}">{{ t('Prof_experience_establishment_5') }}</a></em></p>
+                  <ul>
+                  <li>{{ t('Prof_experience_description_5_skill_1') }}</li>
+                  <li>{{ t('Prof_experience_description_5_skill_2') }}</li>
+                  </ul>
+                </div>
+
                 <div class="resume-item interactive-card"
                    role="link"
                    tabindex="0"
@@ -803,7 +825,7 @@
             <i class="bi bi-geo-alt flex-shrink-0"></i>
             <div>
               <h3>{{ t('Address') }}</h3>
-              <p>La Doua, Lyon, France</p>
+              <p>3 Avenue Hubert Curien, Toulouse, France</p>
             </div>
           </div><!-- End Info Item -->
 
@@ -828,7 +850,8 @@
       </div>
 
       <div class="col-lg-7">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.5032960386116!2d4.866578791593222!3d45.78114379651535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eaa1e83e5a71%3A0xea10294dfcf46939!2sLa%20Doua%20LYON%201!5e0!3m2!1sfr!2sfr!4v1735385821394!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Carte Google Maps - Localisation de Lyon, France"></iframe>
+        <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Carte Google Maps - Localisation de Lyon, France"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891.2887771053947!2d1.425417082000731!3d43.55886545879717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebbe6df3d1905%3A0x62c30ccb574d7907!2sCentre%20de%20Recherches%20en%20Canc%C3%A9rologie%20de%20Toulouse%20(CRCT)!5e0!3m2!1sfr!2sfr!4v1772482833158!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Carte Google Maps - Localisation du CRCT, Toulouse, France"></iframe>
       </div>
 
     </div>
