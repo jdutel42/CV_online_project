@@ -277,7 +277,7 @@
       <h2>{{ t('Resume') }}</h2>
       <p>{{ t('resume_desc') }}</p>
       <br>
-      <a href="static/cv/CV_Jordan_Dutel_2026_English_.pdf" class="btn btn-primary" download title="{{ t('download_cv') }}">
+      <a href="{{ url_for('static', filename='cv/CV_Jordan_Dutel_2026_English.pdf') }}" class="btn btn-primary" download title="{{ t('download_cv') }}">
         {{ t('download_cv') }}</a>
     
   </div><!-- End Section Title -->
